@@ -10,7 +10,7 @@ public class Pemilihan {
         String grade;
         System.out.println("========================================="
                 + "=====================");
-        System.out.println("Program Menghitung Nilai Akhir Mahasiswa");
+        System.out.println("Program Menghitung Nilai Akhir");
         System.out.println("========================================="
                 + "=====================");
         System.out.print("Masukan Nilai Tugas : ");
@@ -24,7 +24,7 @@ public class Pemilihan {
         if (tugas > 100 || kuis > 100 || uts > 100 || uas > 100) {
             System.out.println("========================================="
                     + "=====================");
-            System.out.println("Nilai yang dimasukan tidak valid");
+            System.out.println("Nilai tidak valid!");
             System.out.println("========================================="
                     + "=====================");
         } else {
@@ -51,7 +51,7 @@ public class Pemilihan {
             System.out.println("========================================="
                     + "=====================");
                     if (grade.equals("A") || grade.equals("B+") || grade.equals("B")|| grade.equals("C+")|| grade.equals("C")) {
-                        System.out.println("Selamat Anda Lulus");
+                        System.out.println("Selamat Anda Lulus!");
                     } else {
                         System.out.println("Maaf Anda Tidak Lulus");
                     }
