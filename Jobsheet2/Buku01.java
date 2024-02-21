@@ -2,7 +2,7 @@ public class Buku01 {
     String judul, pengarang;
     int halaman, stok, harga;
     
-    void tampilIndormasi(){
+    void tampilInformasi(){
         System.out.println("Judul Buku : " + judul);
         System.out.println("Pengarang : " + pengarang);
         System.out.println("Jumlah halaman : " + halaman);
@@ -21,7 +21,7 @@ public class Buku01 {
     void restock(int jml){
         stok += jml;
     }
-    
+
     void gantiHarga(int hrg){
         harga = hrg;
     }
