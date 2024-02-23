@@ -21,6 +21,7 @@ public class BukuMain01 {
 
         Buku01 bukuAchmadAnfasaRabbany = new Buku01("Another Day, Another Journey", "Achmad Anfasa Rabbany", 143, 21, 160000);
         bukuAchmadAnfasaRabbany.terjual(2);
+        bukuAchmadAnfasaRabbany.terjual(4);
     }
     
 }
