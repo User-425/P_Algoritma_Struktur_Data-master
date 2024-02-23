@@ -19,7 +19,8 @@ public class BukuMain01 {
         bk2.terjual(11);
         bk2.tampilInformasi();
 
-        Buku01 bukuAchmadAnfasaRabbany = new Buku01("Another Day, Another Journey", "Achmad Anfasa Rabbany", 143, 21, 62500);
+        Buku01 bukuAchmadAnfasaRabbany = new Buku01("Another Day, Another Journey", "Achmad Anfasa Rabbany", 143, 21, 160000);
+        bukuAchmadAnfasaRabbany.terjual(2);
     }
     
 }
