@@ -1,3 +1,4 @@
+package ArrayObjects;
 import java.util.Scanner;
 /**
  * ArrayObjects
@@ -5,8 +6,10 @@ import java.util.Scanner;
 public class ArrayObjects {
     
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        PersegiPanjang[] ppArray= new PersegiPanjang[3];
+        Scanner sc = new Scanner(System.in);    
+        System.out.println("Masukkan panjang array: ");
+        int arrayLength = sc.nextInt();
+        PersegiPanjang[] ppArray= new PersegiPanjang[arrayLength];
 
         for (int i = 0; i < 3; i++) {
             ppArray[i] = new PersegiPanjang();
