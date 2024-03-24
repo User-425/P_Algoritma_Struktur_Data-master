@@ -2,26 +2,44 @@ package ShowRoom;
 
 public class MainShowroom {
 
+<<<<<<< HEAD
     public static int highestAcceleration(Car[] daftarMobil, int low, int high) {
+=======
+    public static double highestAcceleration(Car[] daftarMobil, int low, int high) {
+>>>>>>> d45114d221d166c9763223b9eb0b12fc8065a4bd
         if (low == high) {
             return daftarMobil[low].getTopAcceleration();
         }
 
         int mid = (low + high) / 2;
+<<<<<<< HEAD
         int leftMax = highestAcceleration(daftarMobil, low, mid);
         int rightMax = highestAcceleration(daftarMobil, mid + 1, high);
+=======
+        double leftMax = highestAcceleration(daftarMobil, low, mid);
+        double rightMax = highestAcceleration(daftarMobil, mid + 1, high);
+>>>>>>> d45114d221d166c9763223b9eb0b12fc8065a4bd
 
         return Math.max(leftMax, rightMax);
     }
 
+<<<<<<< HEAD
     public static int lowestAcceleration(Car[] daftarMobil, int low, int high) {
+=======
+    public static double lowestAcceleration(Car[] daftarMobil, int low, int high) {
+>>>>>>> d45114d221d166c9763223b9eb0b12fc8065a4bd
         if (low == high) {
             return daftarMobil[low].getTopAcceleration();
         }
 
         int mid = (low + high) / 2;
+<<<<<<< HEAD
         int leftMin = lowestAcceleration(daftarMobil, low, mid);
         int rightMin = lowestAcceleration(daftarMobil, mid + 1, high);
+=======
+        double leftMin = lowestAcceleration(daftarMobil, low, mid);
+        double rightMin = lowestAcceleration(daftarMobil, mid + 1, high);
+>>>>>>> d45114d221d166c9763223b9eb0b12fc8065a4bd
 
         return Math.min(leftMin, rightMin);
     }
@@ -37,17 +55,28 @@ public class MainShowroom {
         daftarMobil[6] = new Car("Toyota", "86/GT86", "2014", 4180, 609);
         daftarMobil[7] = new Car("Volkswagen", "Golf GTI", "2014", 4180, 631);
 
+<<<<<<< HEAD
         int maxAcceleration = highestAcceleration(daftarMobil, 0, daftarMobil.length - 1);
         System.out.println("Top acceleration tertinggi: " + maxAcceleration);
 
         int minAcceleration = lowestAcceleration(daftarMobil, 0, daftarMobil.length - 1);
+=======
+        double maxAcceleration = highestAcceleration(daftarMobil, 0, daftarMobil.length - 1);
+        System.out.println("Top acceleration tertinggi: " + maxAcceleration);
+
+        double minAcceleration = lowestAcceleration(daftarMobil, 0, daftarMobil.length - 1);
+>>>>>>> d45114d221d166c9763223b9eb0b12fc8065a4bd
         System.out.println("Top acceleration terendah: " + minAcceleration);
 
         int totalPower = 0;
         for (Car car : daftarMobil) {
             totalPower += car.getTopPower();
         }
+<<<<<<< HEAD
         int averagePower = (int) totalPower / daftarMobil.length;
+=======
+        double averagePower = (double) totalPower / daftarMobil.length;
+>>>>>>> d45114d221d166c9763223b9eb0b12fc8065a4bd
         System.out.println("Rata-rata top power: " + averagePower);
     }
 }
