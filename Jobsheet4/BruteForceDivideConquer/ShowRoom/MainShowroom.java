@@ -12,28 +12,30 @@ public class MainShowroom {
                 System.out.println("Rata-rata top power: " + averagePower);
         }
 
-        public static int highestAcceleration(Car[] daftarMobil, int low, int high) {
+        public static int highestAccelerationIndex(Car[] daftarMobil, int low, int high) {
                 if (low == high) {
-                        return daftarMobil[low].getTopAcceleration();
+                        return low;
                 }
 
                 int mid = (low + high) / 2;
-                int leftMax = highestAcceleration(daftarMobil, low, mid);
-                int rightMax = highestAcceleration(daftarMobil, mid + 1, high);
+                int leftMaxIndex = highestAccelerationIndex(daftarMobil, low, mid);
+                int rightMaxIndex = highestAccelerationIndex(daftarMobil, mid + 1, high);
 
-                return Math.max(leftMax, rightMax);
+                return (daftarMobil[leftMaxIndex].getTopAcceleration() > daftarMobil[rightMaxIndex]
+                                .getTopAcceleration()) ? leftMaxIndex : rightMaxIndex;
         }
 
-        public static int lowestAcceleration(Car[] daftarMobil, int low, int high) {
+        public static int lowestAccelerationIndex(Car[] daftarMobil, int low, int high) {
                 if (low == high) {
-                        return daftarMobil[low].getTopAcceleration();
+                        return low;
                 }
 
                 int mid = (low + high) / 2;
-                int leftMin = lowestAcceleration(daftarMobil, low, mid);
-                int rightMin = lowestAcceleration(daftarMobil, mid + 1, high);
+                int leftMinIndex = lowestAccelerationIndex(daftarMobil, low, mid);
+                int rightMinIndex = lowestAccelerationIndex(daftarMobil, mid + 1, high);
 
-                return Math.min(leftMin, rightMin);
+                return (daftarMobil[leftMinIndex].getTopAcceleration() < daftarMobil[rightMinIndex]
+                                .getTopAcceleration()) ? leftMinIndex : rightMinIndex;
         }
 
         public static void main(String[] args) {
@@ -47,12 +49,15 @@ public class MainShowroom {
                 daftarMobil[6] = new Car("Toyota", "86/GT86", "2014", 4180, 609);
                 daftarMobil[7] = new Car("Volkswagen", "Golf GTI", "2014", 4180, 631);
 
-                int maxAcceleration = highestAcceleration(daftarMobil, 0, daftarMobil.length - 1);
-                System.out.println("Top acceleration tertinggi: " + maxAcceleration);
+                int maxAccelerationIndex = highestAccelerationIndex(daftarMobil, 0, daftarMobil.length - 1);
+                System.out.println("Car with the highest acceleration:");
+                daftarMobil[maxAccelerationIndex].showAllData();
 
-                int minAcceleration = lowestAcceleration(daftarMobil, 0, daftarMobil.length - 1);
-                System.out.println("Top acceleration terendah: " + minAcceleration);
+                int minAccelerationIndex = lowestAccelerationIndex(daftarMobil, 0, daftarMobil.length - 1);
+                System.out.println("\nCar with the lowest acceleration:");
+                daftarMobil[minAccelerationIndex].showAllData();
 
+                System.out.println();
                 averagePower(daftarMobil);
         }
 }
