@@ -3,10 +3,10 @@
  */
 public class Buku {
 
-    int kodeBuku, tahunTerbit, stock;
-    String judul, pengarang;
+    int tahunTerbit, stock;
+    String kodeBuku, judul, pengarang;
 
-    public Buku(int kodeBuku, String judul, String pengarang, int tahunTerbit, int stock) {
+    public Buku(String kodeBuku, String judul, String pengarang, int tahunTerbit, int stock) {
         this.kodeBuku = kodeBuku;
         this.judul = judul;
         this.pengarang = pengarang;
