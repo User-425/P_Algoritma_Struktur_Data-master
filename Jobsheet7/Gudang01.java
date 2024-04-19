@@ -72,6 +72,7 @@ public class Gudang01 {
     }
 
     public String konversiDesimalkeBiner(int kode){
+
         StackKonversi01 stack = new StackKonversi01();
         while (kode>0) {
             int sisa = kode%2;
